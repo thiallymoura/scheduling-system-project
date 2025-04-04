@@ -8,7 +8,8 @@ import "./styles/global.css";
 import "./styles/form.css";
 import "./styles/schedule.css";
 
+// JS
+import "./modules/form/submit.js";
+import "./modules/form/date-change.js";
 
-// Testando a data
-import dayjs from "dayjs";
-console.log(dayjs().format("DD/MM/YYYY HH:mm"));
+import "./modules/page-load.js";
