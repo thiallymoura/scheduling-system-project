@@ -1,7 +1,7 @@
 <h1> 🚀 Projeto prático - Agendamento - Hair Day</h1>
 
 <p align="center">
-  <img alt="" src="">
+  <img alt="" src="./src/assets/readme.png">
 </p>
 
 ## 🚀 Tecnologias
@@ -23,8 +23,5 @@ Esse projeto foi desenvolvido utilizando as seguintes tecnologias:
 
 ## 💻 Projeto
 
-O Hair Day é uma plataforma de agendamento online para salões de beleza. Desenvolvido durante o curso Fullstack da Rocketseat, no módulo JavaScript Intermediário, 
+O Hair Day é uma plataforma de agendamento online para salões de beleza. Desenvolvido durante o curso Fullstack da Rocketseat, no módulo JavaScript Intermediário,
 o projeto visa proporcionar uma interface simples e funcional para a gestão de agendamentos, com a capacidade de adicionar, visualizar, excluir e filtrar agendamentos de forma prática e eficiente.
-
-
-
