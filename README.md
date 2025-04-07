@@ -25,3 +25,14 @@ Esse projeto foi desenvolvido utilizando as seguintes tecnologias:
 
 O Hair Day é uma plataforma de agendamento online para salões de beleza. Desenvolvido durante o curso Fullstack da Rocketseat, no módulo JavaScript Intermediário,
 o projeto visa proporcionar uma interface simples e funcional para a gestão de agendamentos, com a capacidade de adicionar, visualizar, excluir e filtrar agendamentos de forma prática e eficiente.
+
+## 🌟 Rodar o Servidor e o Projeto
+Para rodar o projeto, você precisa executar dois comandos:
+
+Em um terminal, execute o comando para rodar o servidor de desenvolvimento:<br>
+- npm run server
+
+Em outro terminal, execute o comando para rodar o projeto:<br>
+- npm run dev
+
+O primeiro comando irá iniciar um servidor para armazenar os agendamentos, e o segundo comando iniciará a aplicação no seu navegador.
