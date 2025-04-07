@@ -1,29 +1,35 @@
 // Importando o dayjs
 import dayjs from "dayjs";
 // Importando as horas disponíveis
-import { OpeningHours } from "../../utils/opening-hours.js";
+import { openingHours } from "../../utils/opening-hours.js";
 
 import { hoursClick } from "./hours-click.js";
 
 const hours = document.getElementById("hours")
 
-export function hoursLoad({ date }) {
+export function hoursLoad({ date, dailySchedules }) {
     // limpa a lista de horários
-    hours.innerHTML = ""
+    hours.innerHTML = "";
 
-    const opening = OpeningHours.map((hour) => { // A função map é usada para iterar sobre o array OpeningHours e retornar um novo array
+    //obtém a lista de horários ocupados
+    const unavailableHours = dailySchedules.map((schedule) => dayjs(schedule.when).format("HH:mm"))
+
+    const opening = openingHours.map((hour) => { // A função map é usada para iterar sobre o array OpeningHours e retornar um novo array
         //recupera somente a hora
-        const [schedulesHour] = hour.split(":") // destrutura o array para pegar somente a hora
+        const [scheduleHour] = hour.split(":") // destrutura o array para pegar somente a hora
         // console.log(hour)
         // console.log(schedulesHour)
 
         // adiciona a hora no date e verifica se está no passado
-        const isHourPast = dayjs(date).add(schedulesHour, "hour").isAfter(dayjs())
+        const isHourPast = dayjs(date).add(scheduleHour, "hour").isBefore(dayjs())
         // console.log(schedulesHour, isHourPast)
+
+        // verifica se a hora está disponível
+        const available = !unavailableHours.includes(hour) && !isHourPast
 
         return {
             hour,
-            available: isHourPast,
+            available,
         }
     })
 
